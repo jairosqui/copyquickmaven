@@ -14,6 +14,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Query;
 import javax.persistence.EntityNotFoundException;
+import javax.persistence.Persistence;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 import javax.transaction.UserTransaction;
@@ -29,12 +30,17 @@ public class SaldoJpaController implements Serializable {
         this.emf = emf;
     }
     private UserTransaction utx = null;
-    private EntityManagerFactory emf = null;
+    private EntityManagerFactory emf = Persistence.createEntityManagerFactory("com.mycompany_mavencopy_war_1.0-SNAPSHOTPU");
 
     public EntityManager getEntityManager() {
         return emf.createEntityManager();
     }
 
+    public SaldoJpaController() {
+        
+    }
+
+    
     public void create(Saldo saldo) throws RollbackFailureException, Exception {
         EntityManager em = null;
         try {

@@ -1,6 +1,6 @@
 <%-- 
-    Document   : index
-    Created on : Mar 13, 2019, 6:32:21 PM
+    Document   : versaldo
+    Created on : Mar 13, 2019, 6:47:10 PM
     Author     : Asus
 --%>
 
@@ -126,10 +126,15 @@ body {
 <div class="saldo">
   <div class="saldo-triangle"></div>
   <h2 class="saldo-header">CopyQuick</h2>
-  <form class="saldo-container" method="post">
+  <form class="saldo-container" method="get">
     
 <center>
-  <p2 align="center">Saldo ingresado correctamente</p2>
+  <p2 align="center">Los saldos actuales son:</p2>
+  <form>
+    <tr>
+      <h1>tabla</h1>
+    </tr>
+  </form>
   <a href="" class="button">regresar</a>
 
 </center>
